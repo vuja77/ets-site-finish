@@ -6,7 +6,7 @@ import {motion} from "framer-motion";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import Cookies from 'universal-cookie';
-//import Config from "../../Config";
+import Config from "../../Config";
 import { ToastContainer, toast } from 'react-toastify';
 
 function Login() {
@@ -30,17 +30,16 @@ const HandleInput = (event) => {
 	console.log(LoginInputs);
 }
 /*Send login request*/
-/*
 const LoginRequest = async (event) => {
 	event.preventDefault();
 	console.log("a");
 	await axios.post(Config.apiUrl+"/login", LoginInputs)
 	.then((response) => {
 		console.log(response.data.success.token);
-		/*set token cookie*//*
+		/*set token cookie*/
 		const token = response.data.success.token;
 		cookies.set('token', token);
-		/*redirect to homepage*//*
+		/*redirect to homepage*/
 		Navigate("/", {
 			state: "Uspjesno ste se prijavili",
 		});
@@ -50,7 +49,7 @@ const LoginRequest = async (event) => {
 		
 		notify2();
 	})
-} */
+} 
 	return (
 		<>
 		<ToastContainer enableMultiContainer toastId={'B'}/>
@@ -82,7 +81,7 @@ const LoginRequest = async (event) => {
 						<h5>Zaboravili ste loinku?</h5>
 					</div>
 					
-					<button /*onClick={LoginRequest}*/>Login</button>
+					<button onClick={LoginRequest}>Login</button>
 						<h4>Nemate nalog? <Link to="/register">Registruj se</Link></h4>
 				</div>
 			</form>

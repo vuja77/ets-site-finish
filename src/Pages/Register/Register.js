@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from 'universal-cookie';
-//import Config from "../../Config";
+import Config from "../../Config";
 function Register() {
     const Navigate =useNavigate();
     useEffect(() => {
@@ -38,7 +38,7 @@ const HandleInput = (event) => {
     setInputs({...RegisterInputs, [event.target.name]: event.target.value,});
 }
 /*Send register request*/
-/*const RegisterRequest = async (event) => {
+const RegisterRequest = async (event) => {
     await axios.post(Config.apiUrl+"/register", RegisterInputs)
     .then((response) => {
         console.log(response.data.success.token);
@@ -54,11 +54,11 @@ const HandleInput = (event) => {
         setErrorName(Object.keys(error.response.data.error));
         setErrorValue(error.response.data.error);   
     });
-}*/
+}
 
 
 /*GET edprograms i class*/
-/*useEffect(() => {
+useEffect(() => {
     const ClassFetch = async () => {
       const className = await (
         await fetch(Config.apiUrl+"/classes")
@@ -70,7 +70,7 @@ const HandleInput = (event) => {
       setEdprograms(Ed_programs);
     };
     ClassFetch();
-}, [])*/
+}, [])
 
 	return (
 		<motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.6 }} className="Register">
@@ -125,7 +125,7 @@ const HandleInput = (event) => {
                             })}
                         </select>
 					</label>
-					<button /*onClick={RegisterRequest}*/>Registruj se</button>
+					<button onClick={RegisterRequest}>Registruj se</button>
 					<h4>Imate nalog? <Link to="/Login" aria-label="Login">Prijavi se</Link></h4>
 				</div>
 			</div>

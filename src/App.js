@@ -7,7 +7,7 @@ import Nav from "./components/Nav";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-//import Config from "./Config";
+import Config from "./Config";
 import axios from "axios";
 import Izrada from "./Pages/uIzdradi/Izrada";
 
@@ -18,7 +18,7 @@ function App() {
   const [userMail, setMail] = useState();
   const [userRole, setRole] = useState();
   
- /* useEffect(() => {
+  useEffect(() => {
     const fetchApiData = async () => {
       await axios.get(Config.apiUrl + "/details", {
         headers: {
@@ -34,7 +34,7 @@ function App() {
       fetchApiData();
     }
 
-  }, []);*/
+  }, []);
   return (
     <AnimatePresence  >
     <BrowserRouter>
@@ -45,8 +45,9 @@ function App() {
           <Route path="obavjestenja" element={<Izrada />} />
           <Route path="prijavi-stetu" element={<Izrada />} />
           <Route path="zasto-cutis" element={<Izrada />} />
+          
 
-          <Route path="materijali" element={null} />
+          <Route path="materijali" element={<Izrada />} />
         </Route>
         <Route path="/" >
           <Route path="login" element={<Login />} />

@@ -8,7 +8,7 @@ import { faClose, faAngleDown, faRightFromBracket, faGears } from '@fortawesome/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from "react";
 import axios from "axios";
-//import Config from "../Config";
+import Config from "../Config";
 import Cookies from 'universal-cookie';
 import { useLocation } from "react-router-dom";
 
@@ -31,7 +31,7 @@ function Nav() {
       state: "Uspjesno ste se odjavili",
     });
   }
- /* useEffect(() => {
+  useEffect(() => {
     const fetchApiData = async () => {
       await axios.get(Config.apiUrl + "/details", {
         headers: {
@@ -47,19 +47,19 @@ function Nav() {
       fetchApiData();
     }
 
-  }, []);*/
+  }, []);
   return (
     <>
       <nav className={activeMeni === "2" ? "active" : ""}>
         <Link to="/"><img src={Logo} alt="logo" /></Link>
         <ul>
           <li className={location.pathname === "/" ? "active" : ""}> <Link to="/">Početna</Link> </li>
-          <li className={location.pathname === "/materijali" ? "active" : ""}> <Link to="/materijali">Materijali</Link> </li>
+          <li className={location.pathname === "/materijali" ? "active" : ""}> <Link to="https://elektropg.online/ets/course/index.php?categoryid=55">Materijali</Link> </li>
           <li className={location.pathname === "/o-skoli" ? "active" : ""}> <Link to="/o-skoli">O školi</Link> </li>
           <li onClick={() => setServisiDropMeni(!ServisiDropMeni)} id={ServisiDropMeni === true ? "opened" : ""}> Servisi <FontAwesomeIcon icon={faAngleDown} /></li>
           
          {/*<li id="Login" className={cookieValue !== "" ? "hide" : ""}> <Link to="/Login"><button>Log in</button></Link> </li> */} 
-          <li id="Login" className={cookieValue !== "" ? "hide" : ""}> <a href="https://elektropg.online/ets/login/index.php"><button className="Login">Log in</button></a> </li>
+          <li id="Login" className={cookieValue !== "" ? "hide" : ""}> <a href="https://elektropg.online/ets/login/index.php"><button className="Login">Prijavi se</button></a> </li>
 
           <li onClick={() => setDropMeni(!UserDropMeni)} id={UserDropMeni === true ? "opened" : ""} className={cookieValue !== "" ? "UserInf" : "hide"} >{userMail} <FontAwesomeIcon icon={faAngleDown} /></li>
           <li id="Hambuger">
@@ -77,7 +77,7 @@ function Nav() {
       </div>
       <div className="ServisiDrop" id={ServisiDropMeni === true ? "" : "hide"}>
         <ul>
-        <Link to="https://elektropg.online/ets/"> <li>LMS</li></Link>
+        <Link to="https://elektropg.online/ets/"> <li>Moodle</li></Link>
         <Link to="zasto-cutis"> <li>Zašto ćutiš</li></Link>
         <Link to="prijavi-stetu"> <li> Prijavi štetu</li></Link>
 
@@ -90,7 +90,7 @@ function Nav() {
           <Link to="/" id="active">Home</Link>
         </li>
         <li>
-          <Link to="/Materijali">Materijali</Link>
+          <Link to="https://elektropg.online/ets/course/index.php?categoryid=55">Materijali</Link>
         </li>
         <li>
           <Link to="/o-skoli">O školi</Link>
