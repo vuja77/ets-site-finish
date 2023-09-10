@@ -8,7 +8,6 @@ import { faClose, faAngleDown, faRightFromBracket, faGears } from '@fortawesome/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Config from "../Config";
 import Cookies from 'universal-cookie';
 import { useLocation } from "react-router-dom";
 
@@ -31,7 +30,7 @@ function Nav() {
       state: "Uspjesno ste se odjavili",
     });
   }
-  useEffect(() => {
+  /*useEffect(() => {
     const fetchApiData = async () => {
       await axios.get(Config.apiUrl + "/details", {
         headers: {
@@ -47,7 +46,7 @@ function Nav() {
       fetchApiData();
     }
 
-  }, []);
+  }, []);*/
   return (
     <>
       <nav className={activeMeni === "2" ? "active" : ""}>
