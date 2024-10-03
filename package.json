@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "ets-site": "file:",
     "framer-motion": "^10.12.18",
     "js-cookie": "^3.0.5",
     "pipwerks-scorm-api-wrapper": "^0.1.2",
