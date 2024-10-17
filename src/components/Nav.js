@@ -87,7 +87,7 @@ function Nav() {
           {/*<li id="Login" className={cookieValue !== "" ? "hide" : ""}> <Link to="/Login"><button>Log in</button></Link> </li> */}
           <li id="Login" className={cookieValue !== "" ? "hide" : ""}>
             {" "}
-            <a href="https://elektropg.online/ets/login/index.php">
+            <a href="https://elektropg.online/ets">
               <button className="Login">Prijavi se</button>
             </a>{" "}
           </li>
