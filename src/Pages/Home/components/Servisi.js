@@ -30,13 +30,13 @@ function Servisi() {
               <p>Platforma za učenje</p>
             </div>
           </a>
-          <Link to="/https://elektropg.online/ets/">
+          <a href="/https://elektropg.online/ets/">
             <div className="Srv" id="Obavjestenja">
               <div></div>
               <strong>Obavještenja</strong>
               <p>Budi obavješten o svemu</p>
             </div>
-          </Link>
+          </a>
           <Link to="/zasto-cutis">
             <div className="Srv" id="ZastoCutis">
               <div></div>

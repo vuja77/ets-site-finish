@@ -68,9 +68,9 @@ function Nav() {
           </li>
           <li className={location.pathname === "/materijali" ? "active" : ""}>
             {" "}
-            <Link to="https://elektropg.online/ets/course/index.php?categoryid=55">
+            <a href="https://elektropg.online/ets/course/index.php?categoryid=55">
               Materijali
-            </Link>{" "}
+            </a>{" "}
           </li>
           <li className={location.pathname === "/o-skoli" ? "active" : ""}>
             {" "}
@@ -128,10 +128,10 @@ function Nav() {
       </div>
       <div className="ServisiDrop" id={ServisiDropMeni === true ? "" : "hide"}>
         <ul>
-          <Link to="https://elektropg.online/ets/">
+          <a href="https://elektropg.online/ets/">
             {" "}
             <li>Moodle</li>
-          </Link>
+          </a>
           <Link to="zasto-cutis">
             {" "}
             <li>Zašto ćutiš</li>
@@ -141,9 +141,9 @@ function Nav() {
             <li> Prijavi štetu</li>
           </Link>
 
-          <Link to="https://elektropg.online/ets/">
+          <a href="https://elektropg.online/ets/">
             <li> Obavještenja</li>
-          </Link>
+          </a>
         </ul>
       </div>
       <ul id="MobileMeni" className={activeMeni === "2" ? "active" : ""}>
@@ -153,9 +153,9 @@ function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="https://elektropg.online/ets/course/index.php?categoryid=55">
+          <a href="https://elektropg.online/ets/course/index.php?categoryid=55">
             Materijali
-          </Link>
+          </a>
         </li>
         <li>
           <Link to="/o-skoli">O školi</Link>
